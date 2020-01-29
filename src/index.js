@@ -37,7 +37,7 @@ function likes(e,id){
     })
     fetch("http://localhost:3000/toys"+id,configObj)
     .then(resp => resp.json())
-    .then(data =>  console.log(data))
+    .then(data =>  {clearToys(); getToys();})
     .catch(err => console.log(err));
 }
 }
