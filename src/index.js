@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
       toyForm.style.display = 'none'
     }
   })
-
+  getToys();
 })
 
 function submitData(name,email){
