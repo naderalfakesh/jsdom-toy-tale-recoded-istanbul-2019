@@ -29,7 +29,6 @@ function addAToy(e){
   const inputs = document.getElementsByClassName("input-text")
   const name = inputs[0].value;
   const image = inputs[1].value;
-  console.log(name,src);
   const configObj = {
     method: "POST",
     headers: {
