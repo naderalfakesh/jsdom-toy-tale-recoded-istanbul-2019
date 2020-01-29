@@ -26,7 +26,20 @@ function createToyCard(data){
 }
 function likes(e,id){
   e.preventDefault();
-  console.log(id);
+  const configObj = {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    body: JSON.stringify({
+      likes: 1
+    })
+    fetch("http://localhost:3000/toys"+id,configObj)
+    .then(resp => resp.json())
+    .then(data =>  console.log(data))
+    .catch(err => console.log(err));
+}
 }
 function addAToy(e){
   e.preventDefault();
