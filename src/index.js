@@ -48,7 +48,7 @@ function addAToy(e){
 }
 
 function clearToys(){
-  document.querySelector('div.')
+  document.querySelector("toy-collection").innerHTML = ""
 }
 
 
