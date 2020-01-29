@@ -24,6 +24,27 @@ function createToyCard(data){
   document.body.appendChild(card);
 }
 
+function addAToy(){
+  const inputs = document.getElementsByClassName("input-text")
+  const name = inputs[0].value;
+  const src = inputs[1].value;
+  const configObj = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    body: JSON.stringify({
+      name: name ,
+      image: src, 
+      likes: 0
+    })
+  
+  fetch("http://localhost:3000/toys",configObj)
+  .then(resp => resp.json())
+  .then(data => console.log(data))
+  .catch(err => console.log(err));
+}
 document.addEventListener("DOMContentLoaded", ()=>{
   const addBtn = document.querySelector('#new-toy-btn')
   const toyForm = document.querySelector('.container')
@@ -36,7 +57,11 @@ document.addEventListener("DOMContentLoaded", ()=>{
       toyForm.style.display = 'none'
     }
   })
+  
   getToys();
+
+  document.getElementsByClassName('submit')[0].addEventListener('click', () =>addAToy());
+  addAToy();
 })
 
 function submitData(name,email){
