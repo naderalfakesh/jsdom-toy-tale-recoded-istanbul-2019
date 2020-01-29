@@ -43,7 +43,7 @@ function addAToy(e){
 }
   fetch("http://localhost:3000/toys",configObj)
   .then(resp => resp.json())
-  .then(data => console.log(data))
+  .then(data => getToys())
   .catch(err => console.log(err));
 }
 document.addEventListener("DOMContentLoaded", ()=>{
