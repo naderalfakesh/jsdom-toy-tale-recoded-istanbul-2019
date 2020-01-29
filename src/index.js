@@ -22,7 +22,7 @@ function createToyCard(data){
 
   card.append(header,img,para,btn);
   document.querySelector("#toy-collection").appendChild(card);
-  btn.onClick = console.log("data.id");
+  btn.onClick = console.log(data.id);
 }
 
 function addAToy(e){
