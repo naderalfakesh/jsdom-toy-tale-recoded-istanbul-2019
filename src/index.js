@@ -43,7 +43,7 @@ function addAToy(e){
 }
   fetch("http://localhost:3000/toys",configObj)
   .then(resp => resp.json())
-  .then(data => getToys())
+  .then(data => {clearToys(); getToys() ; })
   .catch(err => console.log(err));
 }
 
@@ -67,8 +67,5 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
   getToys();
 
-  document.getElementsByClassName('submit')[0].addEventListener('click',(e) => {
-    clearToys() ;
-    addAToy(e) ;
-  });
+  document.getElementsByClassName('submit')[0].addEventListener('click',addAToy);
 })
