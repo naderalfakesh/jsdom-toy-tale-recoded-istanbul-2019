@@ -62,7 +62,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
   getToys();
 
   document.getElementsByClassName('submit')[0].addEventListener('click',addAToy);
-  addAToy();
 })
 
 function submitData(name,email){
