@@ -9,13 +9,13 @@ function createToyCard(data){
   const card = document.createElement("div");
   card.className = "card";
   const header = document.createElement("h2");
-  header.innerHTML="nader";
+  header.innerHTML=data.name;
   const img = document.createElement("img");
   img.className="toy-avatar";
-  img.src="nader";
+  img.src=data.image;
   img.alt="toy pic";
   const para = document.createElement("p");
-  para.innerHTML="nader";
+  para.innerHTML=data.likes + "Likes";
   const btn = document.createElement("button");
   btn.className="like-btn";
   btn.innerHTML="Like <3";
