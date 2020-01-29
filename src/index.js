@@ -15,7 +15,7 @@ function createToyCard(data){
   img.src=data.image;
   img.alt="toy pic";
   const para = document.createElement("p");
-  para.innerHTML=data.likes + "Likes";
+  para.innerHTML=data.likes + " Likes";
   const btn = document.createElement("button");
   btn.className="like-btn";
   btn.innerHTML="Like <3";
