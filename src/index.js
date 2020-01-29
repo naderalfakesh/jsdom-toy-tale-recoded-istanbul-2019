@@ -19,12 +19,12 @@ function createToyCard(data){
   const btn = document.createElement("button");
   btn.className="like-btn";
   btn.innerHTML="Like <3";
-  btn.addEventListener("click",(e) => likes(e,data.id) ) ;
+  btn.addEventListener("click",(e) => likes(e,data.id,data.likes) ) ;
 
   card.append(header,img,para,btn);
   document.querySelector("#toy-collection").appendChild(card);
 }
-function likes(e,id){
+function likes(e,id,likes){
   e.preventDefault();
   const configObj = {
     method: "PATCH",
@@ -33,7 +33,7 @@ function likes(e,id){
       "Accept": "application/json"
     },
     body: JSON.stringify({
-      likes: 1
+      likes: likes++
     })
 
   }
