@@ -24,7 +24,8 @@ function createToyCard(data){
   document.body.appendChild(card);
 }
 
-function addAToy(){
+function addAToy(e){
+  e.preventDefault();
   const inputs = document.getElementsByClassName("input-text")
   const name = inputs[0].value;
   const image = inputs[1].value;
