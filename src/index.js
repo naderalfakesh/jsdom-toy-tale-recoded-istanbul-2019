@@ -21,7 +21,7 @@ function createToyCard(data){
   btn.innerHTML="Like <3";
 
   card.append(header,img,para,btn);
-  document.querySelector("toy-collection").appendChild(card);
+  document.querySelector("#toy-collection").appendChild(card);
 }
 
 function addAToy(e){
@@ -48,7 +48,7 @@ function addAToy(e){
 }
 
 function clearToys(){
-  document.querySelector("toy-collection").innerHTML = ""
+  document.querySelector("#toy-collection").innerHTML = ""
 }
 
 
