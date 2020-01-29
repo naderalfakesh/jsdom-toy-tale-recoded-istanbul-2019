@@ -2,7 +2,7 @@ let addToy = false
 function getToys(){
   fetch("http://localhost:3000/toys")
   .then(resp => resp.json())
-  .then(data => createToyCard(data))
+  .then(data => for(card of data){createToyCard(card)})
   .catch(err => console.log(err));
 }
 function createToyCard(data){
