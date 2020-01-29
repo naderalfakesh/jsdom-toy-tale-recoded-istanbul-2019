@@ -46,6 +46,10 @@ function addAToy(e){
   .then(data => getToys())
   .catch(err => console.log(err));
 }
+
+
+
+
 document.addEventListener("DOMContentLoaded", ()=>{
   const addBtn = document.querySelector('#new-toy-btn')
   const toyForm = document.querySelector('.container')
