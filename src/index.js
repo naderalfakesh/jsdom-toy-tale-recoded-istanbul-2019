@@ -7,17 +7,17 @@ function getToys(){
 }
 function createToyCard(data){
   const card = document.createElement("div");
-  card.class = "card";
+  card.className = "card";
   const header = document.createElement("h2");
   header.innerHTML="nader";
   const img = document.createElement("img");
-  img.class="toy-avatar";
+  img.className="toy-avatar";
   img.src="nader";
   img.alt="toy pic";
   const para = document.createElement("p");
   para.innerHTML="nader";
   const btn = document.createElement("button");
-  btn.class="like-btn";
+  btn.className="like-btn";
   btn.innerHTML="Like <3";
 
   card.append(header,img,para,btn);
