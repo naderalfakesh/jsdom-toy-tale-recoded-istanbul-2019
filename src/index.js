@@ -24,8 +24,8 @@ function createToyCard(data){
   card.append(header,img,para,btn);
   document.querySelector("#toy-collection").appendChild(card);
 }
-function likes(){
-  console.log('data.id')
+function likes(id){
+  console.log(id);
 }
 function addAToy(e){
   e.preventDefault();
