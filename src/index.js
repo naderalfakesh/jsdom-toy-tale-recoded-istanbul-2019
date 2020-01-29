@@ -26,6 +26,7 @@ function createToyCard(data){
 }
 function likes(e,id,likes){
   e.preventDefault();
+  likes++;
   const configObj = {
     method: "PATCH",
     headers: {
@@ -33,7 +34,7 @@ function likes(e,id,likes){
       "Accept": "application/json"
     },
     body: JSON.stringify({
-      likes: likes++
+      likes: likes
     })
 
   }
