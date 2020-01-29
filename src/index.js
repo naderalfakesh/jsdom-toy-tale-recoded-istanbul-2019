@@ -27,7 +27,7 @@ function createToyCard(data){
 function addAToy(){
   const inputs = document.getElementsByClassName("input-text")
   const name = inputs[0].value;
-  const src = inputs[1].value;
+  const image = inputs[1].value;
   console.log(name,src);
   const configObj = {
     method: "POST",
@@ -36,8 +36,8 @@ function addAToy(){
       "Accept": "application/json"
     },
     body: JSON.stringify({
-      name: name ,
-      image: src,
+      name,
+      image,
       likes: 0
     })
 }
@@ -64,21 +64,3 @@ document.addEventListener("DOMContentLoaded", ()=>{
   document.getElementsByClassName('submit')[0].addEventListener('click',addAToy);
 })
 
-function submitData(name,email){
-let configObj = {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-    "Accept": "application/json"
-  },
-  body: JSON.stringify({
-    name ,
-    email
-  })
-};
-
-return fetch("http://localhost:3000/users", configObj)
-.then(resp => resp.json())
-.then(data => document.querySelector('span').textContent = data.id)
-.catch(err => document.querySelector('span').textContent = err );
-}
