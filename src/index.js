@@ -35,7 +35,7 @@ function likes(e,id){
     body: JSON.stringify({
       likes: 1
     })
-    fetch("http://localhost:3000/toys"+id,configObj)
+    fetch("http://localhost:3000/toys",configObj)
     .then(resp => resp.json())
     .then(data =>  {clearToys(); getToys();})
     .catch(err => console.log(err));
