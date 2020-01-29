@@ -19,12 +19,13 @@ function createToyCard(data){
   const btn = document.createElement("button");
   btn.className="like-btn";
   btn.innerHTML="Like <3";
-  btn.addEventListener("click",(e) => likes(data.id)) ;
+  btn.addEventListener("click",(e) => likes(e,data.id) ) ;
 
   card.append(header,img,para,btn);
   document.querySelector("#toy-collection").appendChild(card);
 }
-function likes(id){
+function likes(e,id){
+  e.preventDefault();
   console.log(id);
 }
 function addAToy(e){
