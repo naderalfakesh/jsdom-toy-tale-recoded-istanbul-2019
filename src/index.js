@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
   getToys();
 
   document.getElementsByClassName('submit')[0].addEventListener('click',(e) => {
-    addAToy(e) ;
     clearToys() ;
+    addAToy(e) ;
   });
 })
