@@ -19,7 +19,7 @@ function createToyCard(data){
   const btn = document.createElement("button");
   btn.className="like-btn";
   btn.innerHTML="Like <3";
-  btn.addEventListener("click",console.log(data.id)) ;
+  btn.addEventListener("click",(e) => likes(data.id)) ;
 
   card.append(header,img,para,btn);
   document.querySelector("#toy-collection").appendChild(card);
