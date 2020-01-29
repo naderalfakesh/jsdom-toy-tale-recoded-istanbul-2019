@@ -35,11 +35,12 @@ function likes(e,id){
     body: JSON.stringify({
       likes: 1
     })
-    fetch("http://localhost:3000/toys",configObj)
+    
+  }
+    fetch("http://localhost:3000/toys"+id,configObj)
     .then(resp => resp.json())
     .then(data =>  {clearToys(); getToys();})
     .catch(err => console.log(err));
-}
 }
 function addAToy(e){
   e.preventDefault();
