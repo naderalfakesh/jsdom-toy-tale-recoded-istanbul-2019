@@ -21,7 +21,7 @@ function createToyCard(data){
   btn.innerHTML="Like <3";
 
   card.append(header,img,para,btn);
-  console.log(document.body.appendChild(card));
+  document.body.appendChild(card);
 }
 
 document.addEventListener("DOMContentLoaded", ()=>{
