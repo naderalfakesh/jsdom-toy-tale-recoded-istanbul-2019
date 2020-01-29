@@ -36,10 +36,10 @@ function addAToy(){
     },
     body: JSON.stringify({
       name: name ,
-      image: src, 
+      image: src,
       likes: 0
     })
-  
+
   fetch("http://localhost:3000/toys",configObj)
   .then(resp => resp.json())
   .then(data => console.log(data))
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
       toyForm.style.display = 'none'
     }
   })
-  
+
   getToys();
 
   document.getElementsByClassName('submit')[0].addEventListener('click', () =>addAToy());
